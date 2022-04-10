@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">VEZDE-CODE[1]</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="active_order">У вас есть активный заказ</string>
+    <string name="order_number_example">1234</string>
+    <string name="end_order_button">Завершить заказ</string>
+    <string name="dismiss">Отклонить</string>
+    <string name="accept">Принять</string>
+    <string name="shop_name_constant">Название магазина:</string>
+    <string name="shop_name_example">НАЗВАНИЕ_МАГАЗИНА</string>
+    <string name="address_constant">Адрес:</string>
+    <string name="address_example">г. Санкт-Петербург, ул. Комендантский пр-кт, д.1</string>
+    <string name="time_constant">Время доставки:</string>
+    <string name="time_example">22:04</string>
+    <string name="active_order_menu">Активный заказ</string>
+    <string name="history_menu">История заказов</string>
+    <string name="delete">DELETE</string>
+    <string name="map_text">Карта</string>
+</resources>

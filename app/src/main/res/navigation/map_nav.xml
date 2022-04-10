@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_nav"
+    app:startDestination="@id/mapOrdersFragment">
+
+    <fragment
+        android:id="@+id/mapOrdersFragment"
+        android:name="com.myapplication.fragments.MyMapFragment"
+        tools:layout="@layout/map_orders">
+
+    </fragment>
+</navigation>

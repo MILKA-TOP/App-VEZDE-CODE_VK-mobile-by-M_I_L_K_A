@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/orders_nav"
+    app:startDestination="@id/orderCardFragment">
+
+    <fragment
+        android:id="@+id/orderCardFragment"
+        android:name="com.myapplication.fragments.OrderCardFragment"
+        tools:layout="@layout/info_order_layout">
+        <argument
+            android:name="orderNow"
+            app:argType="com.myapplication.OrderInformation"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_orderCardFragment_self"
+            app:destination="@id/orderCardFragment"
+            app:enterAnim="@anim/slide_up"
+            app:popUpTo="@+id/orders_nav"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_orderCardFragment_to_dialogOrderedFragment"
+            app:destination="@id/dialogOrderedFragment" />
+        <action
+            android:id="@+id/action_orderCardFragment_to_activeOrder"
+            app:destination="@id/activeOrder" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialogOrderedFragment"
+        android:name="com.myapplication.fragments.OrderedDialogFragment">
+        <argument
+            android:name="orderNow"
+            app:argType="com.myapplication.OrderInformation" />
+
+        <action
+            android:id="@+id/action_dialogOrderedFragment_to_activeOrder"
+            app:destination="@id/activeOrder"
+            app:launchSingleTop="true" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/activeOrder"
+        android:name="com.myapplication.fragments.ActiveOrderFragment"
+        tools:layout="@layout/active_order">
+        <argument
+            android:name="orderNow"
+            app:argType="com.myapplication.OrderInformation" />
+
+
+        <action
+            android:id="@+id/action_activeOrder_to_orderCardFragment"
+            app:destination="@id/orderCardFragment"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+</navigation>
